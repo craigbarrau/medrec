@@ -5,7 +5,7 @@
 ```
 cp $ORACLE_HOME/wlserver/samples/server/medrec/dist/standalone/medrec.ear .
 cp $ORACLE_HOME/wlserver/samples/server/medrec/dist/standalone/physician.ear .
-``
+```
 3. Copy `medrec-data-import.jar` and `medrec-domain.jar` to the seed directory. We will need to use these when we seed the data for the MedRec application
 ```
 cp $ORACLE_HOME/wlserver/samples/server/medrec/dist/modules/medrec-data-import.jar seed/.
