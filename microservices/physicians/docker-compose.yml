@@ -1,0 +1,20 @@
+---
+version: '2'
+services:
+  mongoclient:
+    image: mongoclient/mongoclient
+    ports:
+     - 3000:3000
+  mongo:
+    image: mongo
+    expose:
+     - 27017
+    ports:
+     - 27017:27017
+  app:
+    build:
+      context: .
+    ports:
+     - 8080:10010
+    depends_on:
+     - mongo

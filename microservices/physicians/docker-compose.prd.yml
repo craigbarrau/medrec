@@ -1,0 +1,15 @@
+---
+version: '2'
+services:
+  mongo:
+    extends:
+      file: docker-compose.yml
+      service: mongo
+    restart: unless-stopped
+  app:
+    image: craigbarrau/rubiconred/medrec-physicians
+    ports:
+      - 80:8080
+    depends_on:
+     - mongo
+    restart: unless-stopped
