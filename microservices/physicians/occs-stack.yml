@@ -8,6 +8,6 @@ services:
   web:
     image: craigbarrau/medrec-physicians
     ports:
-      - 80:8080
+      - 8080:10010
     links:
       - db
